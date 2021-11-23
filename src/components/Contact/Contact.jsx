@@ -15,6 +15,7 @@ const Contact = () => {
       <form
         name='contact'
         className='col-12 col-md-6 mx-auto py-5 px-4 px-md-5 bg-dark text-light'
+        method='post'
       >
         <label className={labelStyles} htmlFor='name'>
           Name
@@ -51,7 +52,9 @@ const Contact = () => {
           placeholder="Hi! I'm John Doe from Company and we want to work with you."
           style={{ minHeight: 200 }}
         ></textarea>
-        <input type='submit' value='Send' className='btn btn-warning' />
+        <button type='submit' className='btn btn-warning'>
+          Send
+        </button>
       </form>
     </section>
   )
