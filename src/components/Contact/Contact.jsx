@@ -13,7 +13,7 @@ const Contact = () => {
       </p>
 
       <form
-        netlify
+        name='contact'
         className='col-12 col-md-6 mx-auto py-5 px-4 px-md-5 bg-dark text-light'
       >
         <label className={labelStyles} htmlFor='name'>
