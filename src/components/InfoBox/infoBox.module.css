@@ -1,0 +1,8 @@
+.infoBox {
+  text-align: center;
+}
+
+.titleStyles {
+  color: var(--accent);
+  text-transform: uppercase;
+}

@@ -1,0 +1,22 @@
+.skillStyles {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.skillsContainer {
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.subtitle {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+@media screen and (max-width: 500px) {
+  .skillsContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}

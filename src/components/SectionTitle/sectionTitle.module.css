@@ -1,0 +1,6 @@
+.titleStyles{
+ text-transform: lowercase;
+ text-decoration: line-through 3px var(--secondary-accent);
+ margin-bottom: 75px;
+ font-size: 2.5rem;
+}

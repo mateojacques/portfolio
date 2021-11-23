@@ -1,0 +1,15 @@
+.separator{
+ gap: 5px;
+}
+
+.line{
+ height: 3px;
+ background-color: var(--muted);
+}
+
+.circle{
+ width: 20px;
+ height: 20px;
+ border-radius: 10px;
+ border: 3px solid var(--muted)
+}

@@ -1,0 +1,19 @@
+.footer {
+  min-height: 200px;
+}
+
+.logo {
+  font-family: var(--logo);
+  font-size: 2.8rem;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+}
+
+.links {
+  list-style: none;
+}
+
+.links a {
+  font-size: 1.2rem;
+}
