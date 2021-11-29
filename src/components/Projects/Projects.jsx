@@ -8,6 +8,7 @@ import {
 import axios from 'axios'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import ReactHTMLParser from 'react-html-parser'
+import Loader from "react-loader-spinner"
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
@@ -29,7 +30,7 @@ const Projects = () => {
       <SectionTitle title='My projects' />
 
       <div className={`${projectsContainer} w-100 align-items-center`}>
-        {projects.length > 0 &&
+        {projects.length > 0 ?
           projects.map((project) => (
             <div
               key={project.name}
@@ -68,7 +69,7 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-          ))}
+          )) : <Loader type="Oval" color="#ba31f0" height={60} width={60}/>}
       </div>
     </div>
   )
