@@ -1,74 +1,78 @@
-import { useState, useEffect } from 'react'
-import { skillStyles, skillsContainer, subtitle } from './about.module.css'
-import SectionTitle from '../SectionTitle/SectionTitle'
-import InfoBox from '../InfoBox/InfoBox'
-import axios from 'axios'
-import Loader from "react-loader-spinner"
+import { useState, useEffect } from "react";
+import { skillStyles, skillsContainer, subtitle, skillDiv } from "./about.module.css";
+import SectionTitle from "../SectionTitle/SectionTitle";
+import InfoBox from "../InfoBox/InfoBox";
+import axios from "axios";
+import Loader from "react-loader-spinner";
 
 const About = () => {
-  const [stack, setStack] = useState([])
+  const [stack, setStack] = useState([]);
 
   useEffect(() => {
     async function fetchStack() {
       await axios
-        .get('https://jacques-portfolio-api.herokuapp.com/api/stack')
+        .get("https://jacques-portfolio-api.herokuapp.com/api/stack")
         .then((res) => setStack(res.data.data))
-        .catch((err) => console.log(err))
-      return
+        .catch((err) => console.log(err));
+      return;
     }
 
-    fetchStack()
-  }, [])
-
-  useEffect(() => {
-    console.log(stack)
-  }, [stack])
+    fetchStack();
+  }, []);
 
   return (
-    <section id='about' className='container'>
-      <SectionTitle title='About me' />
+    <section id="about" className="container">
+      <SectionTitle title="About me" />
       <div
-        className='w-100 d-flex flex-wrap justify-content-center align-items-center bg-light py-4 px-2'
-        style={{ gap: '50px 0' }}
+        className="w-100 d-flex flex-wrap justify-content-center align-items-center bg-light py-4 px-2"
+        style={{ gap: "50px 0" }}
       >
         <InfoBox
-          title='Education'
+          title="Education"
           description={
-            'Web Development (Self-taught)<br/>Software Engineering (In progress)'
+            "Web Development (Self-taught)<br/>Software Engineering (In progress)"
           }
         />
         <InfoBox
-          title='Skills'
+          title="Skills"
           description={
-            'UI Development<br/>REST API Development<br/>Design Translation'
+            "UI Development<br/>REST API Development<br/>Design Translation"
           }
         />
-        <InfoBox title='Experience' description={'2+ years'} />
+        <InfoBox title="Experience" description={"2+ years"} />
       </div>
 
-      <div className='my-5 w-100 d-flex flex-column align-items-center'>
+      <div className="my-5 w-100 d-flex flex-column align-items-center">
         <h3 className={`${subtitle} mb-5 mx-auto`}>My stack</h3>
-        <div className={`${skillsContainer} w-100 align-items-center mx-auto ${!stack.length > 0 && "d-flex justify-content-center"}`}>
-          {stack.length > 0 ?
+        <div
+          className={`${skillsContainer} w-100 align-items-center mx-auto ${
+            !stack.length > 0 && "d-flex justify-content-center"
+          }`}
+        >
+          {stack.length > 0 ? (
             stack.map((skill, index) => (
               <div
-                className='w-100 h-100 p-3 d-flex justify-content-center align-items-center'
+                key={skill.name}
+                className={`${skillDiv} w-100 h-100 p-3 justify-content-center align-items-center`}
                 style={{
-                  backgroundColor: index % 2 === 0 ? '#e9e9e9' : '#f3f3f3',
+                  backgroundColor: index % 2 === 0 ? "#e9e9e9" : "#f3f3f3",
                 }}
               >
                 <img
                   src={skill.image}
-                  key={skill.name}
-                  className={skillStyles}
                   alt={skill.name}
+                  className={`${skillStyles} mb-2`}
                 />
+                <p className="m-0">{skill.name}</p>
               </div>
-            )) : <Loader type="Oval" color="#ba31f0" height={60} width={60}/> }
+            ))
+          ) : (
+            <Loader type="Oval" color="#ba31f0" height={60} width={60} />
+          )}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
