@@ -1,6 +1,6 @@
 import { hero, copy } from './hero.module.css'
 import profile from '../../assets/render.png'
-import cv from '../../assets/cv.pdf'
+import cv from '../../assets/cv2.pdf'
 
 const Hero = () => {
   return (
