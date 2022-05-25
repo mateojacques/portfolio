@@ -9,6 +9,7 @@ import axios from 'axios'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import ReactHTMLParser from 'react-html-parser'
 import Loader from "react-loader-spinner"
+import { BASE_API_URL } from "../../utils/constants";
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
@@ -16,7 +17,7 @@ const Projects = () => {
   useEffect(() => {
     async function fetchProjects() {
       await axios
-        .get('https://jacques-portfolio-api.herokuapp.com/api/projects')
+        .get(`${BASE_API_URL}/projects`)
         .then((res) => setProjects(res.data.data))
         .catch((err) => console.log(err))
       return

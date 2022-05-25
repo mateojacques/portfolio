@@ -4,6 +4,7 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 import InfoBox from "../InfoBox/InfoBox";
 import axios from "axios";
 import Loader from "react-loader-spinner";
+import { BASE_API_URL } from "../../utils/constants";
 
 const About = () => {
   const [stack, setStack] = useState([]);
@@ -11,7 +12,7 @@ const About = () => {
   useEffect(() => {
     async function fetchStack() {
       await axios
-        .get("https://jacques-portfolio-api.herokuapp.com/api/stack")
+        .get(`${BASE_API_URL}/stack`)
         .then((res) => setStack(res.data.data))
         .catch((err) => console.log(err));
       return;
