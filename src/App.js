@@ -8,10 +8,12 @@ import {
   Contact,
   Footer,
 } from './components'
+import ColorSwitch from './components/colorSwitch/ColorSwitch'
 
 function App() {
   return (
     <div className='App'>
+      <ColorSwitch/>
       <Navbar />
       <Hero />
       <Separator />
