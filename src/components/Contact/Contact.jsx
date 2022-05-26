@@ -6,7 +6,7 @@ const Contact = () => {
     <section id='contact' className={`${contact} container d-flex flex-column mb-5`}>
       <SectionTitle title='Contact me' />
 
-      <p className='h6 pb-5'>
+      <p className='h6 pb-2'>
         Feel free to contact me for job opportunities using my social links on
         the <a href='#hero'>top of the page</a>, or fill in this form that I've
         built and I will get back at you as soon as possible.
