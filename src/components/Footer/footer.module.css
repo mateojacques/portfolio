@@ -3,11 +3,10 @@
 }
 
 .logo {
+  color: var(--secondary);
   font-family: var(--logo);
   font-size: 2.8rem;
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 3px;
+  text-decoration: underline 3px var(--accent);
 }
 
 .links {
@@ -16,4 +15,10 @@
 
 .links a {
   font-size: 1.2rem;
+  color: var(--secondary);
+  transition: 0.5s ease;
+}
+
+.links a:hover {
+  color: var(--accent);
 }

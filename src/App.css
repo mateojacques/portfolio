@@ -1,5 +1,5 @@
 /* RESET */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,26 +7,28 @@
 
 /* VARIABLES */
 
-:root{
+:root {
   /* Colors */
-  --neutral: #333;
+  --primary: #fff; /* #151125 */
+  --secondary: #111;
   --accent: #ba31f0;
   --secondary-accent: #f7ff73;
-  --muted: #e6e6e6;
+  --muted: #ececec;
 
   /* Fonts */
-  --logo: 'Comforter', cursive;
-  --body: 'Rubik', sans-serif;
+  --logo: "Comforter", cursive;
+  --body: "Rubik", sans-serif;
 }
 
 /* BODY */
 
-body .root{
+body .root {
   display: flex;
 }
 
-.App{
+.App {
   max-width: 1920px;
   margin: 0 auto;
+  background-color: var(--primary);
   font-family: var(--body);
 }

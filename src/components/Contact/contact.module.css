@@ -1,3 +1,28 @@
 .labelStyles {
   margin-bottom: 10px;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.contact {
+  color: var(--secondary);
+}
+
+.contact > p > a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact form button[type="submit"] {
+  border: 2px solid var(--accent);
+  color: var(--accent) !important;
+  color: #fff;
+  min-width: 100px;
+  margin: 10px auto 0 auto;
+  transition: 0.5s ease;
+}
+
+.contact form button[type="submit"]:hover{
+  color: #fff !important;
+  background-color: var(--accent);
 }

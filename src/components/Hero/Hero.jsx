@@ -1,6 +1,6 @@
-import { hero, copy } from './hero.module.css'
+import { hero, copy, copy_cta } from './hero.module.css'
 import profile from '../../assets/render.png'
-import cv from '../../assets/cv2.pdf'
+import cv from '../../assets/cv.pdf'
 
 const Hero = () => {
   return (
@@ -19,7 +19,7 @@ const Hero = () => {
           learning (and <b>always</b> will).
         </p>
         <div className={`d-flex align-items-center`}>
-          <a href={cv} className='btn btn-dark' download='Mateo Jacques CV'>
+          <a href={cv} className={`${copy_cta} btn`} download='Mateo Jacques CV'>
             Download CV <i className='bi-download ms-3'></i>{' '}
           </a>
           <ul className='d-flex m-0'>
@@ -45,7 +45,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <img src={profile} alt='Me :)' />
+      <img src={profile} alt='Mateo Jacques - Front End Developer' />
     </div>
   )
 }

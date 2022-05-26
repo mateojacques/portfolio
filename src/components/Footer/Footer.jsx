@@ -3,10 +3,10 @@ import { footer, logo, links } from './footer.module.css'
 const Footer = () => {
   return (
     <section
-      className={`${footer} container bg-dark d-flex justify-content-center align-items-center`}
+      className={`${footer} container d-flex justify-content-center align-items-center`}
     >
       <div className='d-flex flex-column align-items-center'>
-        <h1 className={`${logo} text-light mb-4`}>Jacques</h1>
+        <h1 className={`${logo} mb-4`}>Jacques</h1>
         <ul
           className={`${links} w-100 d-flex m-0  p-0 d-flex justify-content-evenly`}
         >
@@ -15,7 +15,6 @@ const Footer = () => {
               href='https://www.linkedin.com/in/mateoleonjacques/'
               target='_blank'
               rel='noreferrer'
-              className='text-light'
             >
               <i className='bi-linkedin'></i>
             </a>
@@ -25,7 +24,6 @@ const Footer = () => {
               href='https://github.com/mateojacques'
               target='_blank'
               rel='noreferrer'
-              className='text-light'
             >
               <i className='bi-github'></i>
             </a>

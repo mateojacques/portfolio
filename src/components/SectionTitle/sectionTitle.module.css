@@ -1,6 +1,13 @@
-.titleStyles{
- text-transform: lowercase;
- text-decoration: line-through 3px var(--secondary-accent);
- margin-bottom: 75px;
- font-size: 2.5rem;
+.titleStyles {
+  text-transform: lowercase;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--secondary);
+}
+
+.titleStyles::after{
+  content: ":";
+  font-size: 2.5rem;
+  color: var(--accent);
+  padding-inline: 10px;
 }

@@ -1,50 +1,64 @@
-.hero{
- gap: 70px;
+.hero {
+  gap: 70px;
 }
 
-.hero img{
- max-width: 400px;
+.hero img {
+  max-width: 400px;
 }
 
-.copy{
- gap: 30px;
+.copy {
+  gap: 30px;
+  color: var(--secondary);
 }
 
-.copy h2{
- font-size: 2.7rem;
- font-weight: 800;
- letter-spacing: 2px;
+.copy h2 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
-.copy h2 span{
- color: var(--accent);
+.copy h2 span {
+  color: var(--accent);
 }
 
-.copy button{
- max-width: 200px;
+.copy_cta {
+  max-width: 200px;
+  border: 2px solid var(--accent) !important;
+  color: var(--accent) !important;
+  transition: 0.4s ease !important;
 }
 
-.copy ul{
- list-style: none;
- gap: 30px;
+.copy_cta:hover {
+  color: #fff !important;
+  background-color: var(--accent) !important;
 }
 
-.copy ul i{
- font-size: 1.5rem;
- color: var(--neutral);
+.copy ul {
+  list-style: none;
+  gap: 30px;
 }
 
-@media screen and (max-width: 1000px){
- .hero{
-  flex-direction: column;
-  text-align: center;
- }
+.copy ul i {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  transition: 0.3s ease;
+}
 
- .hero div{
-  justify-content: center;
- }
+.copy ul i:hover {
+  color: var(--accent);
+}
 
- .hero img{
-  width: 100%;
- }
+@media screen and (max-width: 1000px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero div {
+    justify-content: center;
+  }
+
+  .hero img {
+    width: 100%;
+  }
 }

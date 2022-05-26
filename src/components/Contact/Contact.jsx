@@ -1,9 +1,9 @@
-import { labelStyles } from './contact.module.css'
+import { labelStyles, contact } from './contact.module.css'
 import SectionTitle from '../SectionTitle/SectionTitle'
 
 const Contact = () => {
   return (
-    <section id='contact' className='container d-flex flex-column mb-5'>
+    <section id='contact' className={`${contact} container d-flex flex-column mb-5`}>
       <SectionTitle title='Contact me' />
 
       <p className='h6 pb-5'>
@@ -14,7 +14,7 @@ const Contact = () => {
 
       <form
         name='contact'
-        className='col-12 col-md-6 mx-auto py-5 px-4 px-md-5 bg-dark text-light'
+        className='col-12 col-md-6 mx-auto py-5 px-4 px-md-5 text-light d-flex flex-column'
         method='post'
       >
         <input type='hidden' name='form-name' value='contact' />
@@ -53,7 +53,7 @@ const Contact = () => {
           placeholder="Hi! I'm John Doe from Company and we want to work with you."
           style={{ minHeight: 200 }}
         ></textarea>
-        <button type='submit' className='btn btn-warning'>
+        <button type='submit' className='btn'>
           Send
         </button>
       </form>

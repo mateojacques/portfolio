@@ -18,6 +18,7 @@
 }
 
 .subtitle {
+  color: var(--secondary);
   text-decoration: underline;
   text-decoration-color: var(--accent);
 }
