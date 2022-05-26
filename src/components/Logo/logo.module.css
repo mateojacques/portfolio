@@ -1,0 +1,12 @@
+.logoStyles {
+  font-family: var(--logo);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  color: var(--secondary);
+}
+
+.logoStyles:hover{
+    color: var(--accent);
+    text-decoration-color: var(--primary);
+}

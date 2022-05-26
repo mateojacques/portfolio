@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import {
+  about,
   education,
   skillStyles,
   skillsContainer,
@@ -28,7 +29,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="container">
+    <section id="about" className={`${about} container`}>
       <SectionTitle title="About me" />
       <div
         className={`${education} w-100 d-flex flex-wrap justify-content-center align-items-start py-4 px-2`}

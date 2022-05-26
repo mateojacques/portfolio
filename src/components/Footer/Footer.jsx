@@ -1,4 +1,5 @@
-import { footer, logo, links } from './footer.module.css'
+import { footer, links } from './footer.module.css'
+import Logo from '../Logo/Logo'
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       className={`${footer} container d-flex justify-content-center align-items-center`}
     >
       <div className='d-flex flex-column align-items-center'>
-        <h1 className={`${logo} mb-4`}>Jacques</h1>
+        <Logo tag="a" classes="mb-4 size-s"/>
         <ul
           className={`${links} w-100 d-flex m-0  p-0 d-flex justify-content-evenly`}
         >

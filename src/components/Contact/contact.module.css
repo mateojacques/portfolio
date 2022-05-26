@@ -6,6 +6,8 @@
 
 .contact {
   color: var(--secondary);
+  padding-top: 110px;
+  margin-top: -110px;
 }
 
 .contact > p > a {
@@ -25,4 +27,11 @@
 .contact form button[type="submit"]:hover{
   color: #fff !important;
   background-color: var(--accent);
+}
+
+@media screen and (max-width: 800px){
+  .contact{
+    padding-top: 200px;
+    margin-top: -200px;
+  }
 }

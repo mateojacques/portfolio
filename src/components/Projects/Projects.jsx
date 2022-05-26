@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import {
+  projectsStyles,
   overlay,
   projectsContainer,
   projectContainer,
@@ -27,7 +28,7 @@ const Projects = () => {
   }, [])
 
   return (
-    <div className='container' id='projects'>
+    <div className={`${projectsStyles} container`} id='projects'>
       <SectionTitle title='My projects' />
 
       <div className={`${projectsContainer} w-100 align-items-center`}>

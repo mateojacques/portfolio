@@ -36,3 +36,16 @@ body .root {
 *{
   transition: 0.2s ease !important;
 }
+
+/* Font sizes */
+.size-s{
+  font-size: 2.5rem;
+}
+
+.size-md{
+  font-size: 3.5rem;
+}
+
+.size-lg{
+  font-size: 4.5rem;
+}

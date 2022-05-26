@@ -1,9 +1,10 @@
-import {nav, logo, header} from './navbar.module.css'
+import {nav, header} from './navbar.module.css'
+import Logo from '../Logo/Logo'
 
 const Navbar = () => {
  return (
   <header className={`${header} container d-flex py-3 align-items-center`}>
-   <h1 className={`${logo}`}>Jacques</h1>
+   <Logo tag="a" classes="size-md"/>
 
    <nav className={nav}>
     <ul className="d-flex">

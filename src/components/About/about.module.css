@@ -1,3 +1,8 @@
+.about {
+  padding-top: 110px;
+  margin-top: -110px;
+}
+
 .education{
   background: none;
 }
@@ -34,6 +39,13 @@
   color: var(--secondary);
   text-decoration: underline;
   text-decoration-color: var(--accent);
+}
+
+@media screen and (max-width: 800px){
+  .about{
+    padding-top: 200px;
+    margin-top: -200px;
+  }
 }
 
 @media screen and (max-width: 500px) {

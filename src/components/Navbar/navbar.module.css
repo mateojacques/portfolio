@@ -4,16 +4,8 @@
   top: 0;
   left: 0;
   background-color: var(--primary);
+  /* border-bottom: 2px solid var(--muted); */
   z-index: 5;
-}
-
-.logo {
-  font-family: var(--logo);
-  font-size: 3.5rem;
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 3px;
-  color: var(--secondary);
 }
 
 nav {

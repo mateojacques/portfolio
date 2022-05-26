@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 import {
   Navbar,
   Hero,
@@ -7,13 +7,13 @@ import {
   Projects,
   Contact,
   Footer,
-} from './components'
-import ColorSwitch from './components/colorSwitch/ColorSwitch'
+} from "./components";
+import ColorSwitch from "./components/ColorSwitch/ColorSwitch";
 
 function App() {
   return (
-    <div className='App'>
-      <ColorSwitch/>
+    <div className="App">
+      <ColorSwitch />
       <Navbar />
       <Hero />
       <Separator />
@@ -24,7 +24,7 @@ function App() {
       <Contact />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
