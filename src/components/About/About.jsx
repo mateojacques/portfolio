@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
-import { skillStyles, skillsContainer, subtitle, skillDiv } from "./about.module.css";
+import {
+  education,
+  skillStyles,
+  skillsContainer,
+  subtitle,
+  skillDiv,
+} from "./about.module.css";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import InfoBox from "../InfoBox/InfoBox";
 import axios from "axios";
@@ -9,15 +15,15 @@ import { BASE_API_URL } from "../../utils/constants";
 const About = () => {
   const [stack, setStack] = useState([]);
 
-  useEffect(() => {
-    async function fetchStack() {
-      await axios
-        .get(`${BASE_API_URL}/stack`)
-        .then((res) => setStack(res.data.data))
-        .catch((err) => console.log(err));
-      return;
-    }
+  async function fetchStack() {
+    await axios
+      .get(`${BASE_API_URL}/stack`)
+      .then((res) => setStack(res.data.data))
+      .catch((err) => console.log(err));
+    return;
+  }
 
+  useEffect(() => {
     fetchStack();
   }, []);
 
@@ -25,7 +31,7 @@ const About = () => {
     <section id="about" className="container">
       <SectionTitle title="About me" />
       <div
-        className="w-100 d-flex flex-wrap justify-content-center align-items-center bg-light py-4 px-2"
+        className={`${education} w-100 d-flex flex-wrap justify-content-center align-items-start py-4 px-2`}
         style={{ gap: "50px 0" }}
       >
         <InfoBox
@@ -51,13 +57,10 @@ const About = () => {
           }`}
         >
           {stack.length > 0 ? (
-            stack.map((skill, index) => (
+            stack.map((skill) => (
               <div
                 key={skill.name}
                 className={`${skillDiv} w-100 h-100 p-3 justify-content-center align-items-center`}
-                style={{
-                  backgroundColor: index % 2 === 0 ? "#e9e9e9" : "#f3f3f3",
-                }}
               >
                 <img
                   src={skill.image}

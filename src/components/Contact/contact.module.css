@@ -19,7 +19,7 @@
   color: #fff;
   min-width: 100px;
   margin: 10px auto 0 auto;
-  transition: 0.5s ease;
+  transition: 0.5s ease !important;
 }
 
 .contact form button[type="submit"]:hover{

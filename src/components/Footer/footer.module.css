@@ -16,7 +16,6 @@
 .links a {
   font-size: 1.2rem;
   color: var(--secondary);
-  transition: 0.5s ease;
 }
 
 .links a:hover {

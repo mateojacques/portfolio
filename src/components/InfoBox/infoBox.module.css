@@ -1,5 +1,6 @@
 .infoBox {
   text-align: center;
+  color: var(--secondary);
 }
 
 .titleStyles {
