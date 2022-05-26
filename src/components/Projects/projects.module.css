@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #5b1a75da;
+  background-color: var(--primary);
   z-index: 1;
   opacity: 0;
   transition: 0.3s;
@@ -12,6 +12,15 @@
 
 .overlay:hover {
   opacity: 1;
+}
+
+.overlay > div > a{
+  color: var(--accent);
+}
+
+.overlay > div > a:hover{
+  background-color: var(--accent);
+  color: #fff;
 }
 
 .projectsContainer {
@@ -27,15 +36,15 @@
 
 .text {
   z-index: 2;
-  color: #fff;
+  color: var(--secondary);
 }
 
 h4 {
-  color: var(--secondary-accent) !important;
+  color: var(--accent) !important;
 }
 
 h6 {
-  color: var(--muted) !important;
+  color: var(--secondary) !important;
 }
 
 @media screen and (max-width: 1200px) {
