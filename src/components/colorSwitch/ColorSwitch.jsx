@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { container, colorSwitch } from "./ColorSwitch.module.css";
+import { container, colorSwitch } from "./colorSwitch.module.css";
 
 const root = document.documentElement;
 
