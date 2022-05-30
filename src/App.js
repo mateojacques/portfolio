@@ -8,7 +8,7 @@ import {
   Contact,
   Footer,
 } from "./components";
-import ColorSwitch from "./components/colorSwitch/ColorSwitch";
+import ColorSwitch from "./components/ColorSwitch/ColorSwitch";
 
 function App() {
   return (
