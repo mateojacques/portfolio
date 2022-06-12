@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className={`${hero} container pt-3 px-4 d-flex align-items-center`}
+      className={`${hero} container pt-5 px-4 d-flex align-items-center`}
     >
       <div className={`${copy} w-100 d-flex flex-column`}>
         <h2 className="typer-target">
