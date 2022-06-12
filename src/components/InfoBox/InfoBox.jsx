@@ -1,5 +1,5 @@
 import { titleStyles, infoBox } from './infoBox.module.css'
-import ReactHTMLParser from 'react-html-parser'
+import ReactHTMLParser from 'html-react-parser'
 
 const InfoBox = ({ title, description }) => {
   return (

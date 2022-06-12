@@ -8,7 +8,7 @@ import {
 } from "./projects.module.css";
 import axios from "axios";
 import SectionTitle from "../SectionTitle/SectionTitle";
-import ReactHTMLParser from "react-html-parser";
+import ReactHTMLParser from "html-react-parser";
 import Loader from "react-loader-spinner";
 import { BASE_API_URL } from "../../utils/constants";
 
