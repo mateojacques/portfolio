@@ -18,6 +18,9 @@ const ColorSwitch = () => {
 
       // Set switch button
       switchBtn.style.transform = "translateX(25px)";
+
+      //Set local storage
+      localStorage.setItem("darkMode", true);
     } else {
       // Set css variables
       root.style.setProperty("--primary", "#fff");
@@ -26,15 +29,15 @@ const ColorSwitch = () => {
 
       // Set switch button
       switchBtn.style.transform = "translateX(0px)";
+
+      //Set local storage
+      localStorage.setItem("darkMode", false);
     }
   };
 
   useEffect(() => {
-    let darkModePreference = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-
-    if (darkModePreference) setDarkModeEnabled(true);
+    handleSwitchPalette();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -4,11 +4,8 @@
 
 .hero img {
   max-width: 400px;
+  border-radius: 50%;
   transition: filter 20s ease !important;
-}
-
-.hero img:hover{
-  filter:hue-rotate(360deg);
 }
 
 .copy {
