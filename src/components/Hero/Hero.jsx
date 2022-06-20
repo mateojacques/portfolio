@@ -1,5 +1,5 @@
 import { hero, copy, copy_cta } from "./hero.module.css";
-import profile from "../../assets/profile.png";
+import profile from "../../assets/render.png";
 import cv from "../../assets/cv.pdf";
 import Typewriter from "typewriter-effect";
 
