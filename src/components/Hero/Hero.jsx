@@ -11,15 +11,19 @@ const Hero = () => {
     >
       <div className={`${copy} w-100 d-flex flex-column`}>
         <h2 className="typer-target">
-          I'm Mateo, <br/>
-          <Typewriter
-          component="span"
-            options={{
-              strings: ["Front End", "React", "Javascript"],
-              autoStart: true,
-              loop: true,
-            }}
-          />
+          I'm Mateo, <br />
+          {window.matchMedia("(min-width: 768px)").matches ? (
+            <Typewriter
+              component="span"
+              options={{
+                strings: ["Frontend", "React", "Javascript"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          ) : (
+            <span color="var(--secondary-color)">Frontend </span>
+          )}
           Developer.
         </h2>
         <p>
