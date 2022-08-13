@@ -38,7 +38,7 @@ const About = () => {
         <InfoBox
           title="Interests"
           description={
-            "Web Development<br/>Game Development"
+            "Web Development<br/>Game Development<br/>Software Development"
           }
         />
         <InfoBox
