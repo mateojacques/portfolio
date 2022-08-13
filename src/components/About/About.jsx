@@ -36,9 +36,9 @@ const About = () => {
         style={{ gap: "50px 0" }}
       >
         <InfoBox
-          title="Education"
+          title="Interests"
           description={
-            "Web Development (Self-taught)<br/>Software Engineering (In progress)"
+            "Web Development<br/>Game Development"
           }
         />
         <InfoBox
