@@ -47,7 +47,7 @@ const About = () => {
             "UI Development<br/>REST API Development<br/>Design Translation"
           }
         />
-        <InfoBox title="Experience" description={"2+ years"} />
+        <InfoBox title="Experience" description={"HTML + CSS + JS - 3 years<br/>React - 1 year<br/>Nodejs - 1 year"} />
       </div>
 
       <div className="my-5 w-100 d-flex flex-column align-items-center">
