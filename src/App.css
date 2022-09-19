@@ -9,11 +9,11 @@
 
 :root {
   /* Colors */
-  --primary: #fff; /* #151125 */
-  --secondary: #111;
+  --primary: #111;
+  --secondary: #fff;
   --accent: #ba31f0;
   --secondary-accent: #f7ff73;
-  --muted: #ececec;
+  --muted: #222;
 
   /* Fonts */
   --logo: "Comforter", cursive;
@@ -33,19 +33,26 @@ body .root {
   font-family: var(--body);
 }
 
-*{
+* {
   transition: 0.2s ease !important;
 }
 
 /* Font sizes */
-.size-s{
+.size-s {
   font-size: 2.5rem;
 }
 
-.size-md{
+.size-md {
   font-size: 3.5rem;
 }
 
-.size-lg{
+.size-lg {
   font-size: 4.5rem;
+}
+
+/* Buttons */
+.btn.btn-disabled {
+  background-color: var(--primary);
+  color: var(--muted);
+  pointer-events: none;
 }

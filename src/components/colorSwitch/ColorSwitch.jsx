@@ -4,7 +4,7 @@ import { container, colorSwitch } from "./colorSwitch.module.css";
 const root = document.documentElement;
 
 const ColorSwitch = () => {
-  const [darkModeEnabled, setDarkModeEnabled] = useState(false);
+  const [darkModeEnabled, setDarkModeEnabled] = useState(true);
   const handleSwitchPalette = () => {
     setDarkModeEnabled(!darkModeEnabled);
 

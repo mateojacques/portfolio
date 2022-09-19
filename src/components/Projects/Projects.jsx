@@ -56,7 +56,7 @@ const Projects = () => {
                     href={project.live_url}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn"
+                    className={`btn ${project.live_url ? "" : "btn-disabled"}`}
                   >
                     Live Demo
                   </a>
@@ -64,7 +64,7 @@ const Projects = () => {
                     href={project.repository_url}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn"
+                    className={`btn ${project.live_url ? "" : "btn-disabled"}`}
                   >
                     Repository
                   </a>
