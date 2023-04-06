@@ -16,7 +16,7 @@ const Hero = () => {
             <Typewriter
               component="span"
               options={{
-                strings: ["Frontend", "React", "Javascript"],
+                strings: ["Fullstack", "React", "Javascript"],
                 autoStart: true,
                 loop: true,
               }}

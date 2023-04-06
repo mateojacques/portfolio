@@ -38,16 +38,16 @@ const About = () => {
         <InfoBox
           title="Interests"
           description={
-            "Web Development<br/>Game Development<br/>Software Development"
+            "Web Development<br/>Software Development<br/>Game Development"
           }
         />
         <InfoBox
           title="Skills"
           description={
-            "UI Development<br/>REST API Development<br/>Design Translation"
+            "UI Development<br/>REST API Development<br/>Testing (Unit and E2E)"
           }
         />
-        <InfoBox title="Experience" description={"HTML + CSS + JS - 3 years<br/>React - 1 year<br/>Nodejs - 1 year"} />
+        <InfoBox title="Experience" description={"HTML + CSS + JS - 3 years<br/>React - 2 year<br/>Nodejs - 1 year"} />
       </div>
 
       <div className="my-5 w-100 d-flex flex-column align-items-center">
