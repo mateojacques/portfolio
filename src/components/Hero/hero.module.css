@@ -5,8 +5,7 @@
 .hero img {
   max-width: 350px;
   border-radius: 5px;
-  box-shadow: 5px 5px 5px var(--muted);
-  transition: filter 20s ease !important;
+  filter: drop-shadow(0px 0px 10px var(--accent));
 }
 
 .copy {
