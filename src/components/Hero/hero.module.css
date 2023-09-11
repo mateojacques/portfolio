@@ -1,5 +1,24 @@
+@keyframes fadeOut {
+  from {
+    filter: grayscale(0);
+  }
+
+  to {
+    filter: grayscale(1);
+  }
+}
+
 .hero {
   gap: 70px;
+
+  view-timeline-name: --revealing-image;
+  view-timeline-axis: block;
+  animation-name: fadeOut;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-timeline: --revealing-image;
+
+  animation-range: exit 0% exit 50%;
 }
 
 .hero img {
@@ -38,6 +57,7 @@
 .copy ul {
   list-style: none;
   gap: 30px;
+  display: none;
 }
 
 .copy ul i {

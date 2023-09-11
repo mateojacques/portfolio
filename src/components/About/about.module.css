@@ -1,24 +1,44 @@
+@keyframes fadeIn {
+  from {
+    filter: grayscale(0);
+  }
+
+  to {
+    filter: grayscale(0);
+  }
+}
+
 .about {
   padding-top: 110px;
   margin-top: -110px;
+
+  filter: grayscale(1);
+  view-timeline-name: --revealing-image;
+  view-timeline-axis: block;
+  animation-name: fadeIn;
+  animation-timing-function: ease;
+  animation-fill-mode:none;
+  animation-timeline: --revealing-image;
+
+  animation-range: entry 50% exit 50%;
 }
 
-.education{
+.education {
   background: none;
 }
 
-.skillDiv{
+.skillDiv {
   display: grid;
-  grid-template-rows: .9fr .1fr;
+  grid-template-rows: 0.9fr 0.1fr;
   text-align: center;
   gap: 20px;
 }
 
-.skillDiv:hover{
+.skillDiv:hover {
   transform: scale(1.1);
 }
 
-.skillDiv p{
+.skillDiv p {
   color: var(--secondary);
 }
 
@@ -41,8 +61,8 @@
   text-decoration-color: var(--accent);
 }
 
-@media screen and (max-width: 800px){
-  .about{
+@media screen and (max-width: 800px) {
+  .about {
     padding-top: 200px;
     margin-top: -200px;
   }
