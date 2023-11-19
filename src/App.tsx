@@ -39,9 +39,10 @@ function App() {
                   justifyContent="center"
                   alignItems="center"
                   spacing={5}
+                  textAlign="center"
                 >
                   {PROJECTS.map(({ id, name, icon }) => (
-                    <Grid key={id} item xs={3}>
+                    <Grid key={id} item xs={6} md={3}>
                       <Tooltip title={name} arrow>
                         <img src={icon} alt={name} />
                       </Tooltip>
@@ -52,8 +53,8 @@ function App() {
             </Grid>
             <Grid item xs={12} md={6}>
               <HomeCardWrapper title="I work in...">
-                <Box display="flex" alignItems="center" gap={2}>
-                  <img src={avenidaLogo} alt="avenida+ logo" />
+                <Box display="flex" flexWrap="wrap" alignItems="center" gap={2} marginBlock="auto">
+                  <img src={avenidaLogo} alt="avenida+ logo" width={130} height="auto"/>
                   <Box>
                     <Typography fontSize={20} fontWeight={800} mb={1}>
                       Fullstack Developer (React + Node)
@@ -67,9 +68,9 @@ function App() {
             </Grid>
             <Grid item xs={12} md={6}>
               <HomeCardWrapper title="My current stack is...">
-                <Grid container textAlign="center" alignItems="center">
+                <Grid container textAlign="center" alignItems="center" spacing={5}>
                   {STACK.map(({ id, name, icon }) => (
-                    <Grid key={id} item xs={2}>
+                    <Grid key={id} item xs={4} md={2}>
                       <Tooltip title={name}>
                         <img src={icon} alt={name} />
                       </Tooltip>
@@ -80,9 +81,9 @@ function App() {
             </Grid>
             <Grid item xs={12} md={6}>
               <HomeCardWrapper title="I'm interested in learning...">
-                <Grid container textAlign="center" alignItems="center">
+                <Grid container textAlign="center" alignItems="center" spacing={5}>
                   {LEARNING.map(({ id, name, icon }) => (
-                    <Grid key={id} item xs={2}>
+                    <Grid key={id} item xs={4} md={2}>
                       <Tooltip title={name}>
                         <img src={icon} alt={name} />
                       </Tooltip>
@@ -114,8 +115,17 @@ function App() {
             </Grid>
           </Grid>
 
-          <Grid container justifyContent="center" alignItems="center">
-            <Box display="flex" gap={5}>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            spacing={4}
+          >
+            <Grid
+              item
+              display="flex"
+              justifyContent={{ xs: "center", md: "flex-end" }}
+            >
               <Button
                 variant="outlined"
                 sx={{
@@ -127,14 +137,30 @@ function App() {
               >
                 Download CV
               </Button>
+            </Grid>
+            <Grid
+              item
+              display="flex"
+              gap={5}
+              justifyContent={{ xs: "center", md: "flex-start" }}
+              alignItems="center"
+            >
               {SOCIAL_LINKS.map(({ category, icon, href }: any) => (
-                <Link key={icon} href={href} target="_blank">
+                <Link
+                  key={icon}
+                  href={href}
+                  target="_blank"
+                  sx={{
+                    transition: "0.2s ease",
+                    "&:hover": { opacity: 0.7 },
+                  }}
+                >
                   <Typography fontSize={32}>
                     <FontAwesomeIcon icon={[category, icon]} />
                   </Typography>
                 </Link>
               ))}
-            </Box>
+            </Grid>
           </Grid>
         </Grid>
       </Container>

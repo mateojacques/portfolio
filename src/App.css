@@ -73,6 +73,8 @@
 }
 
 .home-card {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   background: linear-gradient(
     130deg,
@@ -88,7 +90,7 @@
   animation: gradientSwitch 1s 1 forwards ease-in-out;
 }
 
-.home-card:hover::after {
+.home-card:hover::after, .home-link:hover::after {
   content: "";
   position: fixed;
   top: 0;
