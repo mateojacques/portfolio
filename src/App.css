@@ -1,42 +1,125 @@
+@keyframes bounceUp {
+  from {
+    top: -25vw;
+  }
+
+  to {
+    top: 25vw;
+  }
+}
+
+@keyframes bounceDown {
+  from {
+    bottom: -25vw;
+  }
+
+  to {
+    bottom: 25vw;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gradientSwitch {
+  0% {
+    background-position: 10% 0%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.background .circle {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  background-color: var(--accent-muted);
+}
+
+.background .circle-right {
+  top: -50vh;
+  right: 0;
+  animation: bounceUp 8s infinite ease-in-out alternate;
+}
+
+.background .circle-left {
+  bottom: -50vh;
+  left: 0;
+  animation: bounceDown 8s infinite ease-in-out alternate;
+}
+
+.home-card {
+  height: 100%;
+  background: linear-gradient(
+    130deg,
+    var(--card-color),
+    var(--card-color),
+    var(--accent)
+  );
+  background-size: 200% 200%;
+}
+
+.home-card:hover {
+  box-shadow: 0px 0px 10px 10px var(--accent);
+  animation: gradientSwitch 1s 1 forwards ease-in-out;
+}
+
+.home-card:hover::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  animation: fadeIn 0.3s 1;
+}
+
+body .home-link {
+  border-radius: 2.5;
+  padding: 5px 10px;
+  transition: 1s ease;
+  background: linear-gradient(
+    130deg,
+    var(--card-color),
+    var(--accent-muted),
+    var(--accent)
+  );
+  background-size: 200% 200%;
+}
+
+body .home-link:hover {
+  animation: gradientSwitch 1s forwards ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .background .circle {
+    width: 80vw;
+    height: 80vw;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
