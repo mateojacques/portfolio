@@ -53,8 +53,19 @@ function App() {
             </Grid>
             <Grid item xs={12} md={6}>
               <HomeCardWrapper title="I work in...">
-                <Box display="flex" flexWrap="wrap" alignItems="center" gap={2} marginBlock="auto">
-                  <img src={avenidaLogo} alt="avenida+ logo" width={130} height="auto"/>
+                <Box
+                  display="flex"
+                  flexWrap="wrap"
+                  alignItems="center"
+                  gap={2}
+                  marginBlock="auto"
+                >
+                  <img
+                    src={avenidaLogo}
+                    alt="avenida+ logo"
+                    width={130}
+                    height="auto"
+                  />
                   <Box>
                     <Typography fontSize={20} fontWeight={800} mb={1}>
                       Fullstack Developer (React + Node)
@@ -68,7 +79,12 @@ function App() {
             </Grid>
             <Grid item xs={12} md={6}>
               <HomeCardWrapper title="My current stack is...">
-                <Grid container textAlign="center" alignItems="center" spacing={5}>
+                <Grid
+                  container
+                  textAlign="center"
+                  alignItems="center"
+                  spacing={5}
+                >
                   {STACK.map(({ id, name, icon }) => (
                     <Grid key={id} item xs={4} md={2}>
                       <Tooltip title={name}>
@@ -81,7 +97,12 @@ function App() {
             </Grid>
             <Grid item xs={12} md={6}>
               <HomeCardWrapper title="I'm interested in learning...">
-                <Grid container textAlign="center" alignItems="center" spacing={5}>
+                <Grid
+                  container
+                  textAlign="center"
+                  alignItems="center"
+                  spacing={5}
+                >
                   {LEARNING.map(({ id, name, icon }) => (
                     <Grid key={id} item xs={4} md={2}>
                       <Tooltip title={name}>
@@ -146,15 +167,7 @@ function App() {
               alignItems="center"
             >
               {SOCIAL_LINKS.map(({ category, icon, href }: any) => (
-                <Link
-                  key={icon}
-                  href={href}
-                  target="_blank"
-                  sx={{
-                    transition: "0.2s ease",
-                    "&:hover": { opacity: 0.7 },
-                  }}
-                >
+                <Link key={icon} href={href} target="_blank">
                   <Typography fontSize={32}>
                     <FontAwesomeIcon icon={[category, icon]} />
                   </Typography>

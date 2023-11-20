@@ -83,14 +83,20 @@
     var(--accent)
   );
   background-size: 200% 200%;
+  transition: 0.5s ease !important;
+}
+
+.home-card:hover,
+.home-link:hover {
+  box-shadow: 0px 0px 10px 10px var(--accent);
 }
 
 .home-card:hover {
-  box-shadow: 0px 0px 10px 10px var(--accent);
-  animation: gradientSwitch 1s 1 forwards ease-in-out;
+  animation: gradientSwitch 0.5s 1 forwards ease-in-out;
 }
 
-.home-card:hover::after, .home-link:hover::after {
+.home-card:hover::after,
+.home-link:hover::after {
   content: "";
   position: fixed;
   top: 0;
@@ -105,7 +111,7 @@
 body .home-link {
   border-radius: 2.5;
   padding: 5px 10px;
-  transition: 1s ease;
+  transition: 0.5s ease;
   background: linear-gradient(
     130deg,
     var(--card-color),
@@ -116,7 +122,15 @@ body .home-link {
 }
 
 body .home-link:hover {
-  animation: gradientSwitch 1s forwards ease-in-out;
+  animation: gradientSwitch 0.5s forwards ease-in-out;
+}
+
+body .svg-inline--fa path{
+  transition: 0.2s ease;
+}
+
+body .svg-inline--fa:hover path {
+  fill: var(--accent);
 }
 
 @media screen and (max-width: 768px) {
