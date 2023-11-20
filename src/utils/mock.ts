@@ -1,5 +1,5 @@
 import plazemIcon from "../assets/plazem_icon.svg";
-import doraTvIcon from "../assets/doraTv_icon.svg";
+import doraTvIcon from "../assets/doratv_icon.svg";
 import gamefortIcon from "../assets/gamefort_icon.svg";
 import altarIcon from "../assets/altar_icon.svg";
 import reactIcon from "../assets/icon_react.svg";
