@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 const Landing = () => {
   return (
     <Container>
-      <Grid container>
+      <Grid container className="section">
         <Grid item xs={12} mb={6.5} textAlign="center">
           <Typography fontSize={48} fontWeight={800}>
             Mateo Jacques <span className="text-muted">is a</span>{" "}

@@ -3,7 +3,7 @@ import ViewHeader from "../components/generics/ViewHeader";
 
 const Stack = () => {
   return (
-    <Grid container>
+    <Grid container className="section">
       <ViewHeader title="Stack" />
     </Grid>
   );

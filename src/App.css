@@ -20,6 +20,16 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -96,6 +106,11 @@ body .svg-inline--fa path {
 
 body .svg-inline--fa:hover path {
   fill: var(--accent);
+}
+
+/* Sections */
+body .section {
+  animation: fadeIn 1s 1 ease-out forwards;
 }
 
 /* Media queries */
