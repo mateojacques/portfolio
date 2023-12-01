@@ -5,15 +5,10 @@ const bodyComputedStyle = window.getComputedStyle(bodyElement);
 
 const textColor = bodyComputedStyle.getPropertyValue("--text-color");
 
-const accentColor = bodyComputedStyle.getPropertyValue("--accent");
-
 const theme = createTheme({
   palette: {
     primary: {
       main: textColor,
-    },
-    secondary: {
-      main: accentColor,
     },
   },
   typography: {

@@ -1,31 +1,10 @@
 :root {
-  /* WHITE - GREEN */
-
-  /* --bg-color: #fbfbfb;
-  --text-color: #1d1d1d;
-  --muted: #545454;
-  --accent: #41b883;
-  --accent-muted: #d4ffec75;
-  --card-color: #eeecec;
-  --card-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
-
-  /* BLACK - LIGHTBLUE */
-
-  /* --bg-color: #0c0c0c;
-  --text-color: #fff;
-  --muted: #545454;
-  --accent: #76e5fc;
-  --accent-muted: #76e5fc05;
-  --card-color: #222;
-  --card-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
-
-  /* BLACK - GREEN */
-
   --bg-color: #0c0c0c;
-  --text-color: #fff;
+  --text-color: #ebf5ee;
   --muted: #545454;
-  --accent: #41b883;
-  --accent-muted: #41b88310;
+  --accent-values: 65, 184, 131;
+  --accent: rgb(var(--accent-values));
+  --accent-muted: rgba(var(--accent-values), 0.05);
   --card-color: #222;
   --card-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 

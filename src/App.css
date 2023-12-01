@@ -1,39 +1,22 @@
+/* Animations */
+
 @keyframes bounceUp {
   from {
-    top: -25vw;
+    top: -40vw;
   }
 
   to {
-    top: 25vw;
+    top: -20vw;
   }
 }
 
 @keyframes bounceDown {
   from {
-    bottom: -25vw;
+    bottom: -40vw;
   }
 
   to {
-    bottom: 25vw;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes gradientSwitch {
-  0% {
-    background-position: 10% 0%;
-  }
-  100% {
-    background-position: 50% 100%;
+    bottom: -20vw;
   }
 }
 
@@ -43,6 +26,8 @@
   padding: 2rem;
 }
 
+/* Background */
+
 .background {
   position: fixed;
   top: 0;
@@ -50,6 +35,7 @@
   width: 100vw;
   height: 100vh;
   z-index: -1;
+  filter: blur(10px);
 }
 
 .background .circle {
@@ -72,48 +58,20 @@
   animation: bounceDown 8s infinite ease-in-out alternate;
 }
 
-.home-card {
+/* Landing */
+
+body .home-card {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: linear-gradient(
-    130deg,
-    var(--card-color),
-    var(--card-color),
-    var(--accent)
-  );
-  background-size: 200% 200%;
-  transition: 0.5s ease !important;
-}
-
-.home-card:hover,
-.home-link:hover {
-  box-shadow: 0px 0px 10px 10px var(--accent);
-}
-
-.home-card:hover {
-  animation: gradientSwitch 0.5s 1 forwards ease-in-out;
-}
-
-.home-card:hover::after,
-.home-link:hover::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  backdrop-filter: blur(10px);
-  z-index: -1;
-  animation: fadeIn 0.3s 1;
-}
-
-body .home-link {
-  border-radius: 2.5;
-  padding: 5px 10px;
+  background-color: transparent;
   transition: 0.5s ease;
+}
+
+.home-card,
+.home-link {
   background: linear-gradient(
-    130deg,
+    180deg,
     var(--card-color),
     var(--accent-muted),
     var(--accent)
@@ -121,11 +79,18 @@ body .home-link {
   background-size: 200% 200%;
 }
 
-body .home-link:hover {
-  animation: gradientSwitch 0.5s forwards ease-in-out;
+.home-card:hover,
+.home-link:hover {
+  box-shadow: 0px 0px 5px 2px var(--accent);
 }
 
-body .svg-inline--fa path{
+body .home-link {
+  padding: 5px 10px;
+  transition: 0.5s ease;
+  background-color: transparent;
+}
+
+body .svg-inline--fa path {
   transition: 0.2s ease;
 }
 
@@ -133,9 +98,19 @@ body .svg-inline--fa:hover path {
   fill: var(--accent);
 }
 
+/* Media queries */
+
 @media screen and (max-width: 768px) {
+  /* Background */
+
   .background .circle {
     width: 80vw;
     height: 80vw;
+  }
+
+  /* Landing */
+
+  body .home-card > div {
+    text-align: center !important;
   }
 }
